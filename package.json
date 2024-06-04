@@ -34,7 +34,9 @@
   "scripts": {
     "build": "unbuild",
     "add": "nr build && alfy-init",
-    "remove": "alfy-cleanup"
+    "remove": "alfy-cleanup",
+    "lint": "eslint .",
+    "test": "vitest"
   },
   "dependencies": {
     "alfy": "^2.0.0"
