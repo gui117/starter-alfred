@@ -1,0 +1,59 @@
+{
+  "name": "starter-alfred",
+  "type": "module",
+  "version": "0.0.0",
+  "packageManager": "pnpm@9.1.4",
+  "description": "Write Alfred workflow with Node.js and TypeScript",
+  "license": "MIT",
+  "homepage": "https://github.com/gui117/starter-alfred#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gui117/starter-alfred.git"
+  },
+  "bugs": "https://github.com/gui117/starter-alfred/issues",
+  "keywords": [],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs"
+    }
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./dist/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "add": "nr build && alfy-init",
+    "remove": "alfy-cleanup"
+  },
+  "dependencies": {
+    "alfy": "^2.0.0"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.20.0",
+    "@antfu/ni": "^0.21.12",
+    "@types/node": "^20.14.1",
+    "eslint-plugin-format": "^0.1.1",
+    "lint-staged": "^15.2.5",
+    "simple-git-hooks": "^2.11.1",
+    "typescript": "^5.4.5",
+    "unbuild": "^2.0.0",
+    "vitest": "^1.6.0"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}
