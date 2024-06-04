@@ -36,6 +36,7 @@
     "add": "nr build && alfy-init",
     "remove": "alfy-cleanup",
     "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
     "test": "vitest"
   },
   "dependencies": {
